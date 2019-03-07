@@ -44,7 +44,7 @@ def on_callback_query(msg):
     if query_data == "about":
         bot.sendMessage(from_id, text='about1')
     
-TOKEN = '716204897:AAEV4Omttufm9BGT9x_DP-b9O8qTMI5VIwg'
+TOKEN = "<TELEGRAM TOKEN HERE>"
 
 bot = telepot.Bot(TOKEN)
 MessageLoop(bot, {'chat': on_chat_message,
