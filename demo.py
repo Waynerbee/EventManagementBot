@@ -4,7 +4,7 @@ import telepot
 from telepot.loop import MessageLoop
 from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 
-data =[]
+data = []
 
 keyboard = InlineKeyboardMarkup(inline_keyboard = [
     [InlineKeyboardButton(text='View Events', callback_data='view')],
@@ -20,13 +20,13 @@ def on_chat_message(msg):
 
 def add_data(from_id):
     
-    bot.sendMessage(from_id, text='Date of Event (MM/DD/YYYY)',parse_mode="Markdown")
+    bot.sendMessage(from_id, text='Date of Event (MM/DD/YYYY)', parse_mode="Markdown")
         
-    bot.sendMessage(from_id, text='Time of Event (i.e. 23:59)',parse_mode="Markdown")
+    bot.sendMessage(from_id, text='Time of Event (i.e. 23:59)', parse_mode="Markdown")
 
-    bot.sendMessage(from_id, text='Event Title',parse_mode="Markdown")
+    bot.sendMessage(from_id, text='Event Title', parse_mode="Markdown")
 
-    bot.sendMessage(from_id, text='Event Description',parse_mode="Markdown")
+    bot.sendMessage(from_id, text='Event Description', parse_mode="Markdown")
 
 def on_callback_query(msg):
     query_id, from_id, query_data = telepot.glance(msg, flavor='callback_query')
@@ -34,14 +34,14 @@ def on_callback_query(msg):
     
     if query_data=="view":
         if data == []:
-            bot.sendMessage(from_id, text='Event list is empty. Select *Add Events* to create a new list.',parse_mode="Markdown", reply_markup =keyboard)
+            bot.sendMessage(from_id, text='Event list is empty. Select *Add Events* to create a new list.', parse_mode="Markdown", reply_markup=keyboard)
         else:
             bot.sendMessage(from_id, text=data)
-    if query_data=="add":
+    if query_data == "add":
         add_data(from_id)
-    if query_data=="edit":
+    if query_data == "edit":
         bot.sendMessage(from_id, text='edit1')
-    if query_data=="about":
+    if query_data == "about":
         bot.sendMessage(from_id, text='about1')
     
 TOKEN = '716204897:AAEV4Omttufm9BGT9x_DP-b9O8qTMI5VIwg'
