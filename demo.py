@@ -11,16 +11,16 @@ data = {
         'date':'12/30/99',
         'time':'23:59',
         'desc':'This is a demo'
-        }
     }
+}
 
 userstep={
     329246276:{
         'session':'add',
         'step':0,
         'title':'eventname'
-        }
     }
+}
 
 keyboard = InlineKeyboardMarkup(inline_keyboard = [
     [InlineKeyboardButton(text='View Events', callback_data='view')],
@@ -73,7 +73,6 @@ def add_eventdata(from_id,step):
     elif step==3:
         bot.sendMessage(from_id, text='Event Description',parse_mode="Markdown")
     
-    
 def on_callback_query(msg):
     query_id, from_id, query_data = telepot.glance(msg, flavor='callback_query')
     print('Callback Query:', query_id, from_id, query_data)
@@ -97,7 +96,7 @@ def on_callback_query(msg):
     if query_data=="about":
         bot.sendMessage(from_id, text='This bot chronologically sorts your events.\nCreated by @waynerbee', reply_markup=keyboard)
     
-TOKEN = '716204897:AAFx6E0HItxdYDT5ENW7_vAUsQxgKQ8o5RA'
+TOKEN = "<TELEGRAM TOKEN HERE>"
 
 bot = telepot.Bot(TOKEN)
 MessageLoop(bot, {'chat': on_chat_message,
