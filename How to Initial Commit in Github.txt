@@ -1,0 +1,48 @@
+
+wayne@DESKTOP-4C4QRAH MINGW64 ~/Desktop/Projects/Event Management Bot
+$ git init
+Initialized empty Git repository in C:/Users/wayne/Desktop/Projects/Event Management Bot/.git/
+
+wayne@DESKTOP-4C4QRAH MINGW64 ~/Desktop/Projects/Event Management Bot (master)
+$ git remote add origin https://github.com/Waynerbee/EventManagementBot.git
+
+wayne@DESKTOP-4C4QRAH MINGW64 ~/Desktop/Projects/Event Management Bot (master)
+$ git add .
+
+wayne@DESKTOP-4C4QRAH MINGW64 ~/Desktop/Projects/Event Management Bot (master)
+$ git commit -m "Init commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'wayne@DESKTOP-4C4QRAH.(none)')
+
+wayne@DESKTOP-4C4QRAH MINGW64 ~/Desktop/Projects/Event Management Bot (master)
+$ git config --global user.email "wayne9wee@hotmail.com"
+
+wayne@DESKTOP-4C4QRAH MINGW64 ~/Desktop/Projects/Event Management Bot (master)
+$ git config --global user.name "Wayne Wee"
+
+wayne@DESKTOP-4C4QRAH MINGW64 ~/Desktop/Projects/Event Management Bot (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 2551cc8] Initial commit
+ 1 file changed, 57 insertions(+)
+ create mode 100644 demo.py
+
+wayne@DESKTOP-4C4QRAH MINGW64 ~/Desktop/Projects/Event Management Bot (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 968 bytes | 968.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Waynerbee/EventManagementBot.git
+ * [new branch]      master -> master
